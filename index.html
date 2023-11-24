@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Segundo Parcial Tobias Moretti</title>
+</head>
+
+<body>
+
+    <div id="divTabla" style="border: 2px solid black; display: inline-block; padding: 5px;">
+        <h1>FUTBOLISTAS & PROFESIONALES</h1>
+        <label for="filtro"id="lblfiltro">Filtrar Por:</label>
+        <select id="filtro" name="filtro">
+            <option value="Todos">Todos</option>
+            <option value="Futbolistas">Futbolistas</option>
+            <option value="Profesionales">Profesionales</option>
+        </select>
+        <br><br>
+
+        <label>Mostrar Columnas:</label>  
+        <br>
+        <input type="checkbox" id="ID" class="chkbx" name="ID" checked>
+        <label for="ID">ID</label>
+        <input type="checkbox" id="Nombre" class="chkbx" name="Nombre" checked>
+        <label for="Nombre">Nombre</label>
+        <input type="checkbox" id="Apellido" class="chkbx" name="Apellido" checked>
+        <label for="Apellido">Apellido</label>
+        <input type="checkbox" id="Edad" class="chkbx" name="Edad" checked>
+        <label for="Edad">Edad</label>
+        <input type="checkbox" id="Equipo" class="chkbx" name="Equipo" checked>
+        <label for="Equipo">Equipo</label>
+        <input type="checkbox" id="Posicion" class="chkbx" name="Posicion" checked>
+        <label for="Posicion">Posición</label>
+        <input type="checkbox" id="CantidadGoles" class="chkbx" name="CantidadGoles" checked>
+        <label for="CantidadGoles">Cantidad de Goles</label>
+        <input type="checkbox" id="Titulo" class="chkbx" name="Titulo" checked>
+        <label for="Titulo">Titulo</label>
+        <input type="checkbox" id="Facultad" class="chkbx" name="Facultad" checked>
+        <label for="Facultad">Facultad</label>
+        <input type="checkbox" id="AñoGraduacion" class="chkbx" name="AñoGraduacion" checked>
+        <label for="AñoGraduacion">Año de Graduación</label>     
+        <br>
+
+        <table id="tablaEntera">
+            <thead id="headers">
+                <tr>
+                    <th class="tablaHeader columnaID">ID</th>
+                    <th class="tablaHeader columnaNombre">Nombre</th>
+                    <th class="tablaHeader columnaApellido">Apellido</th>
+                    <th class="tablaHeader columnaEdad">Edad</th>
+                    <th class="tablaHeader columnaEquipo">Equipo</th>
+                    <th class="tablaHeader columnaPosicion">Posicion</th>
+                    <th class="tablaHeader columnaCantidadGoles">Cantidad de Goles</th>
+                    <th class="tablaHeader columnaTitulo">Titulo</th>
+                    <th class="tablaHeader columnaFacultad">Facultad</th>
+                    <th class="tablaHeader columnaAñoGraduacion">Año de Graduación</th>
+                    <th class="tablaHeader columnaBotonModificar">Modificar</th>
+                    <th class="tablaHeader columnaBotonEliminar">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="tablaDePersonas">
+            </tbody>
+        </table>
+
+        <div>
+            <button class="boton" id="btnAgregar">Agregar Elemento</button>
+        </div>        
+    </div>
+
+    <div id="divABM">
+        <h1 id="tituloABM">Formulario ABM</h1>
+    
+        <div class="divABMInput">
+            <label for="txtid" id="lblid">Id:</label>
+            <input type="text" id="txtid" name="id" value="" disabled>
+        </div>
+        
+        <div class="divABMInput">
+            <label for="txtnombre" id="lblnombre">Nombre:</label>
+            <input type="text" id="txtnombre" name="nombre" value="">
+        </div>
+        
+        <div class="divABMInput">
+            <label for="txtapellido" id="lblapellido">Apellido:</label>
+            <input type="text" id="txtapellido" name="apellido" value="">
+        </div>
+        
+        <div class="divABMInput">
+            <label for="txtedad" id="lbledad">Edad:</label>
+            <input type="text" id="txtedad" name="edad" value="">
+        </div>
+        
+        <div class="divABMInput">
+            <label for="selectTipo" id="lbltipo">Tipo:</label>
+            <select name="tipo" id="selectTipo" >
+                <option value="Futbolista" selected>Futbolista</option>
+                <option value="Profesional">Profesional</option>
+            </select>
+        </div>
+        
+        <div class="divABMInput">
+            <label for="txtAtr5" id="lblAtr5">:</label>
+            <input type="text" id="txtAtr5" name="txtAtr5" value="">
+        </div>
+        
+        <div class="divABMInput">
+            <label for="txtAtr6" id="lblAtr6">:</label>
+            <input type="text" id="txtAtr6" name="txtAtr6" value="">
+        </div>
+        
+        <div class="divABMInput">
+            <label for="txtAtr7" id="lblAtr7">:</label>
+            <input type="text" id="txtAtr7" name="txtAtr7" value="">
+        </div>
+        
+        <button class="boton" id="btnAceptar">Aceptar</button>
+        <button class="boton" id="btnCancelar">Cancelar</button>
+    </div>
+
+    <div id="overlay">
+        <div class="spinner"></div>
+    </div>
+    <script src="aplicacion.js"></script>
+</body>
+</html>
